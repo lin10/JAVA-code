@@ -1,0 +1,1 @@
+详细内容可以访问一零的站点中 [从0到1学JAVA之第七天–Mybatis使用接口文件代替xml配置文件](https://www.onezero.cc/contents/%e4%bb%8e0%e5%88%b01%e5%ad%a6java%e4%b9%8b%e7%ac%ac%e4%b8%83%e5%a4%a9-mybatis%e4%bd%bf%e7%94%a8%e6%8e%a5%e5%8f%a3%e6%96%87%e4%bb%b6%e4%bb%a3%e6%9b%bfxml%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6)
