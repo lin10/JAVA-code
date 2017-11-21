@@ -26,7 +26,7 @@ public class main {
      }
      
      public static String TimeToDate(long time){
-    	 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-DD hh:mm:ss");
+    	 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:MM:ss");
     	 Date date = new Date(time);
     	 String res = simpleDateFormat.format(date);
     	 return res;
@@ -37,10 +37,10 @@ public class main {
     	 try{
     		 JobInter jobInter = session.getMapper(JobInter.class);
     		 Job job = jobInter.getJobByid(11);
-    		 System.out.println("ID£º               "+job.getJid());
-    		 System.out.println("Ö°Î»Ãû³Æ£º"+job.getJname());
-    		 System.out.println("ÊıÄ¿£º          "+job.getNumber() );
-    		 System.out.println("·¢²¼ÈÕÆÚ£º"+TimeToDate(job.getCreate_at()));
+    		 System.out.println("IDï¼š               "+job.getJid());
+    		 System.out.println("èŒä½åç§°ï¼š"+job.getJname());
+    		 System.out.println("æ•°ç›®ï¼š          "+job.getNumber() );
+    		 System.out.println("å‘å¸ƒæ—¥æœŸï¼š"+TimeToDate(job.getCreate_at()));
     	 }catch(Exception e){
     		 e.printStackTrace();
     	 }finally{
