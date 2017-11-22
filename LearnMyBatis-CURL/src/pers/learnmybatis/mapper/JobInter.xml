@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.learnmybatis.mapper.JobInter">
+	<select id="getJob" resultType="pers.learnmybatis.po.Job">
+		select * from yl_job where jname = #{jname}
+	</select>
+	<insert id="insertJob" parameterType="Job">
+	    insert into yl_job (jname,number,create_at,update_at)
+	    values(#{jname},#{number},#{create_at},#{update_at})
+	</insert>
+	<update id="updateJob" parameterType="Job">
+		update yl_job set number=#{number},update_at=#{update_at} 
+		where jid = #{jid}
+	</update>
+	<delete id="deleteJob" parameterType="long">
+		delete from yl_job where jname = #{jname}
+	</delete>
+	<select id="getJobList" resultType="pers.learnmybatis.po.Job">
+	 	select * from yl_job
+	</select>
+</mapper>

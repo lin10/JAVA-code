@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 定义别名 -->
+	<typeAliases>
+		<typeAlias alias="Job" type="pers.learnmybatis.po.Job"/>
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<!-- 采用jdbc事务管理 -->
+			<transactionManager type="JDBC"/>
+			<!-- 配置数据库连接 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/ylxjava?useUnicode=true&amp;characterEncoding=utf8"/>
+				<property name="username" value="root"/>
+				<property name="password" value=""/>
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 定义映射器 -->
+	<mappers>
+		<mapper resource="pers/learnmybatis/mapper/jobInter.xml"/>
+	</mappers>
+</configuration>
+	
