@@ -1,13 +1,13 @@
 package pers.onezero.spring;
 
 public class Hello10 {
-	private String name;
+	private String name1;
 	
-	public void setName(String name){
-		this.name = name;
+	public void setName1(String name){
+		this.name1 = name;
 	}
 	
 	public void printName(){
-		System.out.println("Spring:Hello:"+name);
+		System.out.println("Spring:Hello:"+name1);
 	}
 }
