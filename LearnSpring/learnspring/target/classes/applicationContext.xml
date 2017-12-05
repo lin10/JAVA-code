@@ -4,7 +4,18 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
-    <bean id="helloID" class="pers.onezero.spring.Hello10">
+    <bean id="helloID" class="pers.onezero.spring.main.Hello10">
         <property name="name1" value="onezero"/>
+    </bean>
+    <bean id="JobBean" class="pers.onezero.qiyi.Job">
+    	<constructor-arg type="java.lang.String">
+    		<value>JAVA开发工程师</value>
+    	</constructor-arg>
+    	<constructor-arg type="java.lang.String">
+    		<value>10</value>
+    	</constructor-arg>
+    	<constructor-arg type="int">
+    		<value>3</value>
+    	</constructor-arg>
     </bean>
 </beans>
