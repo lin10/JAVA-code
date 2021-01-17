@@ -63,7 +63,7 @@ public class AddTwoNums0002 {
             temp = sum/10;
             resListNode.next =new ListNode(sum%10);
             resListNode=resListNode.next;
-
+            //如果链表不为空，则执行下个节点
             l1=l1!=null?l1.next:null;
             l2=l2!=null?l2.next:null;
         }
