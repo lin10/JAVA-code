@@ -28,7 +28,7 @@ public class RuningSum1480 {
         int[] nums = {1,2,3,10};
         int[] resNums = runningSum(nums);
         System.out.println(Arrays.toString(resNums));
-        //输出结果[1, 3, 6, 16]
+        //输出结果为[1, 3, 6, 16]
     }
 
 }
