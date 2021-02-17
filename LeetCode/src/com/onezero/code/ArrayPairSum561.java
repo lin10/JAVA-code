@@ -15,23 +15,47 @@ public class ArrayPairSum561 {
     private static int arrayPairSum(int[] nums){
         int tmp=0;
         //冒泡排序
-        for(int i=0;i<nums.length;i++){
-            for(int j=0; j<i;j++){
-                if(nums[i]<=nums[j]){
-                    tmp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = tmp;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(nums));
-        int k=0;
+//        for(int i=0;i<nums.length;i++){
+//            for(int j=0; j<i;j++){
+//                if(nums[i]<=nums[j]){
+//                    tmp = nums[i];
+//                    nums[i] = nums[j];
+//                    nums[j] = tmp;
+//                }
+//            }
+//        }
+//        快速排序，最优情况下是O(n*log(n))
+//        quick_sort(nums,0,nums.length-1);
+
+//
+//       Arrays.sort()是经过调优排序算法，性能能达到n*log(n)
+        Arrays.sort(nums);
         int sum=0;
-        while(k<nums.length){
+        for(int k=0;k<nums.length;k=k+2){
             sum+=nums[k];
-            k+=2;
         }
         return sum;
+    }
+
+    //快速排序实现方法
+    private static void quick_sort(int[] arr, int l, int r){
+        if(l<r){
+            int key=arr[l],i=l,j=r;
+            while(i<j){
+                while(i<j&&arr[j]>=key){
+                    j--;
+                }
+                if(i<j) arr[i++]=arr[j];
+                while(i<j&&arr[i]<=key){
+                    i++;
+                }
+                if(i<j) arr[j--]=arr[i];
+            }
+            arr[i]=key;
+            quick_sort(arr,l,i-1);
+            quick_sort(arr,i+1,r);
+        }
+
     }
 
     public static void main(String[] args){
