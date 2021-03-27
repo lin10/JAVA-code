@@ -1,5 +1,7 @@
 package com.onezero.code;
 
+import java.util.Stack;
+
 public class Find132pattern456 {
 
     /**
@@ -28,6 +30,22 @@ public class Find132pattern456 {
             }
             if(min<nums[flag] && nums[flag]>mid && min<mid) return true;
             flag++;
+        }
+        return false;
+    }
+
+    public boolean find132pattern(int[] nums) {
+        int len = nums.length;
+        if(len<3) return false;
+        Stack<Integer> stack = new Stack<>();
+        int mid = Integer.MIN_VALUE;
+        stack.push(nums[len-1]);
+        for(int i=len-1;i>=0;i--){
+            if(nums[i]<mid) return true;
+            while(!stack.isEmpty()&&nums[i]>stack.peek()){
+                mid=stack.pop();
+            }
+            stack.push(nums[i]);
         }
         return false;
     }
