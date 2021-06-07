@@ -11,7 +11,7 @@ public class ReductionOperations5777 {
      * 找出 nums 中的 下一个最大 值，这个值 严格小于 largest ，记为 nextLargest 。
      * 将 nums[i] 减少到 nextLargest 。
      * 返回使 nums 中的所有元素相等的操作次数
-     *
+     * 注：排序直接用Arrays.sort()，搞了个快排还是超时了
      */
 
     public static void main(String[] args){
